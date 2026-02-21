@@ -32,7 +32,7 @@ This project is structured in two main parts:
 
 You can add MiniShell-CLI to your project via **JitPack**.
 
-### Ajouter le repository JitPack
+### Add the JitPack repository
 
 **Gradle (Groovy DSL)** – add this in your `settings.gradle` :
 
