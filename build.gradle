@@ -1,24 +1,30 @@
-plugins {
-    id 'java'
-}
+apply plugin: 'java'
+apply plugin: 'maven-publish'
 
-group = 'fr.nkri'
-version = '1.2'
+group = 'com.github.NKRIDev'
+version = '1.0'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
     mavenCentral()
 }
 
-dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+java {
+    withSourcesJar()
+    withJavadocJar()
 }
 
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+        }
     }
 }
 
-tasks.test {
-    useJUnitPlatform()
+wrapper {
+    gradleVersion = "7.3.3"
+    distributionType = Wrapper.DistributionType.ALL
 }
