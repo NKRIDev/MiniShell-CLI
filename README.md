@@ -30,8 +30,66 @@ This project is structured in two main parts:
 
 ## Installation
 
-TODO : create a repo gradle ?
+You can add MiniShell-CLI to your project via **JitPack**.
 
+### Ajouter le repository JitPack
+
+**Gradle (Groovy DSL)** – add this in your `settings.gradle` :
+
+```gradle
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+**Gradle (Kotlin DSL)** – add this to your `settings.gradle.kts` file:
+```kotlin
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenCentral()
+        maven { url = uri("https://jitpack.io") }
+    }
+}
+```
+
+**Maven** – add this to the <repositories> section of your pom.xml:
+```xml
+<repository>
+    <id>jitpack.io</id>
+    <url>https://jitpack.io</url>
+</repository>
+```
+
+### Add dependency
+Replace Tag with the tag or version you want to use (v1.0, v1.2, etc.).
+
+**Gradle (Groovy DSL)** – in `build.gradle` :
+```gradle
+dependencies {
+    implementation 'com.github.NKRIDev:MiniShell-CLI:Tag'
+}
+```
+
+**Gradle (Kotlin DSL)** – in `build.gradle.kts` :
+```kotlin
+dependencies {
+    implementation("com.github.NKRIDev:MiniShell-CLI:Tag")
+}
+```
+
+**Maven** – in the <dependencies> section of your pom.xml file:
+```xml
+<dependency>
+    <groupId>com.github.NKRIDev</groupId>
+    <artifactId>MiniShell-CLI</artifactId>
+    <version>Tag</version>
+</dependency>
+```
 ----------
 
 ## CLI Utility Library
