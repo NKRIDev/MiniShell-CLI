@@ -1,0 +1,39 @@
+MiniShell CLI - Commercial License Agreement
+-------------------------------------------
+
+This document outlines the terms and conditions for using the MiniShell CLI library
+in commercial or proprietary projects.
+
+1. Grant of License
+-------------------
+The author (NKRI) grants the licensee the non-exclusive, non-transferable right
+to use, integrate, and distribute MiniShell CLI as part of a commercial product
+or service upon receipt of a valid commercial license.
+
+2. Restrictions
+---------------
+- You may NOT redistribute MiniShell CLI or any modified version under open-source
+  or non-commercial terms.
+- You may NOT use MiniShell CLI in a commercial application without purchasing
+  or obtaining a commercial license.
+- Attribution to NKRI is required in your product documentation or "About" section.
+
+3. Modifications
+----------------
+- You may modify MiniShell CLI for internal use within your commercial application.
+- Redistribution of modified versions requires explicit written permission from NKRI.
+
+4. Support & Updates
+--------------------
+- Commercial license holders are eligible for support, updates, and future releases
+  according to the agreement terms.
+
+5. Contact
+----------
+To obtain a commercial license or inquire about terms, contact:
+
+    NKRI
+    Email: nkri.dev@gmaiL.com
+    Discord: https://discord.gg/dkxWh58TqP
+
+By using MiniShell CLI under a commercial license, you agree to comply with the terms above.
