@@ -4,8 +4,8 @@ apply plugin: 'maven-publish'
 group = 'com.github.NKRIDev'
 version = '1.0'
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 21
+targetCompatibility = 21
 
 repositories {
     mavenCentral()
