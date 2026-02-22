@@ -277,6 +277,58 @@ public class GreetCommand implements ShellCommand {
 ```
 
 ----------
+### Environment Variables
+
+MiniShell allows you to define and use environment variables inside your custom shell.
+
+Environment variables let you store reusable values that can be dynamically injected into user commands.
+
+#### Registering an Environment Variable
+
+You can register an environment variable before starting the shell:
+
+```java
+shell.registerEnvVar("USERNAME", "nkri");
+```
+
+#### Using Environment Variables in Commands
+
+Environment variables are referenced using the $ prefix.
+
+Example:
+```bash
+CustomShell> greet $USERNAME
+```
+
+MiniShell will automatically replace `$USERNAME` with its stored value before executing the command.
+
+If `USERNAME = nkri`, the executed command becomes:
+```bash
+greet nkri
+```
+
+#### Managing Environment Variables
+MiniShell provides several methods to manage environment variables:
+
+```java
+shell.registerEnvVar("KEY", "value");  // Create
+shell.setEnvVar("KEY", "newValue");    // Update
+shell.getEnvVars("KEY");               // Retrieve
+shell.hasEnvVar("KEY");                // Check existence
+shell.removeEnvVar("KEY");             // Delete
+```
+
+#### Best Practices
+
+✔ Use uppercase names for environment variables
+
+✔ Always check existence before accessing values
+
+✔ Avoid overriding important environment variables unintentionally
+
+✔ Document environment variables in your shell help menu
+
+----------
 
 ### Running Your Shell
 ```java
